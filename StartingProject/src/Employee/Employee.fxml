@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="720.0" prefWidth="1280.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Employee.EmployeeController">
+   <children>
+      <TabPane layoutX="-2.0" layoutY="1.0" prefHeight="719.0" prefWidth="1281.0" tabClosingPolicy="UNAVAILABLE">
+        <tabs>
+          <Tab text="Employee">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="276.0" prefWidth="286.0">
+                     <children>
+                        <HBox layoutX="406.0" layoutY="-3.0" prefHeight="689.0" prefWidth="877.0">
+                           <children>
+                              <TableView fx:id="projecttable" prefHeight="689.0" prefWidth="877.0">
+                                <columns>
+                                  <TableColumn fx:id="IDcol" prefWidth="200.0" text="ID" />
+                                  <TableColumn fx:id="projectcol" prefWidth="200.0" text="Project" />
+                                    <TableColumn fx:id="commentscol" prefWidth="250.0" text="Comments" />
+                                    <TableColumn fx:id="datecol" prefWidth="200.0" text="Date" />
+                                </columns>
+                              </TableView>
+                           </children>
+                        </HBox>
+                        <VBox layoutX="3.0" layoutY="125.0" prefHeight="561.0" prefWidth="404.0">
+                           <children>
+                              <Button fx:id="loadButton" mnemonicParsing="false" onAction="#loadProjectData" prefHeight="27.0" prefWidth="71.0" text="Load">
+                                 <VBox.margin>
+                                    <Insets left="160.0" />
+                                 </VBox.margin>
+                              </Button>
+                           </children>
+                        </VBox>
+                        <Label layoutX="112.0" layoutY="63.0" prefHeight="35.0" prefWidth="197.0" text="Click on Load to view Data" AnchorPane.leftAnchor="112.0" />
+                     </children>
+                  </AnchorPane>
+            </content>
+          </Tab>
+        </tabs>
+      </TabPane>
+   </children>
+</AnchorPane>
